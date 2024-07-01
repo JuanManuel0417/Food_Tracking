@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+
+/*Estilos para el nav*/
+.menu_navegacion {
+    display: flex; /* Centro los elementos */
+    justify-content: space-around; /* Espacio entre elementos */
+    align-items: center; /* Centro verticalmente los elementos */
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+    height: 120px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-bottom: 3%;
+}
+
+.menu_navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.menu_navegacion li {
+    float: left;
+}
+
+.menu_navegacion a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu_navegacion a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: #fff;
+}
+
+.banner {
+    flex: 1; /* Toma el espacio restante disponible */
+    width: 100%;
+}
+
+
+/*Estilos para el contenedor del juego */
+main {
+    color: white;
+    padding: 10px;
+    max-width: 730px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section1 {
+    padding: 10px;
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.section1 h1 {
+    text-align: center;
+}
+
+
+.section2 {
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+}
+
+.section2 .estadisticas {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 25px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.section1 button {
+    width: 120px;  /* Increase button width */
+    height: 120px; /* Increase button height */
+    font-size: 2em;
+    margin: 5px;
+    position: relative; /* Ensures that image will be positioned relative to button */
+    overflow: hidden; /* Hides any part of the image that goes beyond the button */
+}
+
+
+.section1 button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire button without distortion */
+}
+
+
+
+
+
+
+
+
+
+
+
+.pie_pagina {
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c); /* Degradado hacia abajo */
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.pie_pagina h4 {
+    margin-bottom: 10px;
+}
+
+.info_contacto p, .redes_sociales a, .derechos_reservados p {
+    margin: 5px 0;
+}
+
+.redes_sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.redes_sociales a:hover {
+    text-decoration: underline;
+}

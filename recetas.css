@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+
+/*Estilos para el nav*/
+.menu_navegacion {
+    display: flex; /* Centro los elementos */
+    justify-content: space-around; /* Espacio entre elementos */
+    align-items: center; /* Centro verticalmente los elementos */
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+    height: 120px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-bottom: 3%;
+}
+
+.menu_navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.menu_navegacion li {
+    float: left;
+}
+
+.menu_navegacion a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu_navegacion a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.Contenidos{
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    color: black;
+    margin-bottom: 4%;
+}
+
+.Contenidos h3{
+    margin-top: 4%;
+}
+
+.estrellas {
+    margin-top: 5%;
+   display: inline-block;
+   color: #ffcc00;
+   font-size: 24px;
+}
+
+/* Estilos de cada uno de los locales disponibles */
+.Rebel, .Supra, .Siete, .Rake, .Fernanda_Castillo, .Glan_Vives, .Makana, .Luxe, .Paris{
+  color: white;
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  margin-left: 20px;
+  text-align: center;
+}
+.pie_pagina {
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c); /* Degradado hacia abajo */
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.pie_pagina h4 {
+    margin-bottom: 10px;
+}
+
+.info_contacto p, .redes_sociales a, .derechos_reservados p {
+    margin: 5px 0;
+}
+
+.redes_sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.redes_sociales a:hover {
+    text-decoration: underline;
+}

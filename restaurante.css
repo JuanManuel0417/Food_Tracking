@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+
+/*Estilos para el nav*/
+.menu_navegacion {
+    display: flex; /* Centro los elementos */
+    justify-content: space-around; /* Espacio entre elementos */
+    align-items: center; /* Centro verticalmente los elementos */
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+    height: 120px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-bottom: 0%;
+}
+
+.menu_navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.menu_navegacion li {
+    float: left;
+}
+
+.menu_navegacion a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu_navegacion a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Estilos para el contenedor del formulario */
+.contenido_form {
+    width: 100%;
+    display: flex; /* Hace que los elementos hijos se organicen en una fila */
+    justify-content: center; /* Centra los elementos de manera horizontal */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding-top: 60px;
+}
+
+legend{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+.form {
+    position: relative; /* Establece un contexto de posicionamiento relativo */
+    display: flex; /* Organiza los elementos hijos en una columna */
+    flex-direction: column; /* Dirección de los elementos hijos */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 30px; /* Espaciado interno alrededor del contenido */
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c); /* Gradiente de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+
+    /*Esto hace parte de la animación que extraje de una biblioteca*/
+    perspective: 1000px; 
+    transform-style: preserve-3d; 
+    transform: rotateX(-10deg); 
+    transition: all 0.3s ease-in-out; 
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+    animation: form-animation 0.5s ease-in-out; 
+    height: 350px;
+}
+
+
+/* Animación del formulario (Esta la saque de una biblioteca)*/
+@keyframes form-animation {
+    from {
+        transform: rotateX(-30deg);
+        opacity: 0; 
+    }
+    to {
+        transform: rotateX(0deg); 
+        opacity: 1; 
+    }
+}
+
+
+input, select{
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: transparent; /* Fondo transparente */
+
+    /*Hace parte de la biblioteca extraida*/
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+    transform-style: preserve-3d; /* Mantiene la posición de los hijos en 3D */
+    backface-visibility: hidden; /* Oculta la cara trasera en transformaciones 3D */
+    color: rgb(255, 255, 255); /* Color del texto */
+    border: 2px solid #3b8df2; /* Borde de los campos */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; /* Sombra de los campos */
+}
+
+option{
+    color: black;
+}
+
+.input::placeholder {
+    color: #fff; /* Color de los placeholders */
+}
+
+/*Hacer parte de la biblioteca extraida*/
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+    border-color: #3b8df2; /* Color del borde al interactuar */
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo al interactuar */
+    transform: scale(1.05) rotateY(20deg); /* Transformación al interactuar */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra al interactuar */
+    outline: none; /* Quita el borde de enfoque predeterminado */
+}
+
+/* Estilos para el botón */
+button {
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #3b8df2; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transform-style: preserve-3d; /* Mantiene la posición de los hijos en 3D */
+    backface-visibility: hidden; /* Oculta la cara trasera en transformaciones 3D */
+    transform: rotateX(-10deg); /* Rota el botón en el eje X */
+    transition: all 0.3s ease-in-out; /* Transición suave para todos los cambios */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; /* Sombra del botón */
+}
+
+button:hover {
+    background-color: #0077be; /* Color de fondo al pasar el ratón */
+    font-size: 17px; /* Aumenta el tamaño de la fuente al pasar el ratón */
+    transform: scale(1.05) rotateY(20deg) rotateX(10deg); /* Transformación al pasar el ratón */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; /* Sombra al pasar el ratón */
+}
+
+
+
+
+.pie_pagina {
+    background-image: linear-gradient(to bottom,  #1d2643, #2b335c); /* Degradado hacia abajo */
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.pie_pagina h4 {
+    margin-bottom: 10px;
+}
+
+.info_contacto p, .redes_sociales a, .derechos_reservados p {
+    margin: 5px 0;
+}
+
+.redes_sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.redes_sociales a:hover {
+    text-decoration: underline;
+}
