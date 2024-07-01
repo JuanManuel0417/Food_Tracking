@@ -12,17 +12,17 @@ let timerInicial = 35;
 let tiempoRegresivo = null;
 
 // DOM elements
-let mostrarMovimientos = document.getElementById('movimientos');
-let mostrarAciertos = document.getElementById('aciertos');
-let mostrarTiempo = document.getElementById('t-restante');
-let modal = document.querySelector('.modal');
+let mostrarMovimientos = document.getElementById("movimientos");
+let mostrarAciertos = document.getElementById("aciertos");
+let mostrarTiempo = document.getElementById("t-restante");
+let modal = document.querySelector(".modal");
 
 // Sounds
-let winAudio = new Audio('assets/sonidos/ganar.mp3');
-let loseAudio = new Audio('assets/sonidos/perder.mp3');
-let clickAudio = new Audio('assets/sonidos/click.mp3');
-let errorAudio = new Audio('assets/sonidos/error.mp3');
-let correctAudio = new Audio('assets/sonidos/correcto.mp3');
+let winAudio = new Audio("assets/sonidos/ganar.mp3");
+let loseAudio = new Audio("assets/sonidos/perder.mp3");
+let clickAudio = new Audio("assets/sonidos/click.mp3");
+let errorAudio = new Audio("assets/sonidos/error.mp3");
+let correctAudio = new Audio("assets/sonidos/correcto.mp3");
 
 // Generar números aleatorios
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
@@ -37,7 +37,7 @@ function contarTiempo() {
       clearInterval(tiempoRegresivo);
       bloquearTarjetas();
       loseAudio.play();
-      modal.classList.add('active');
+      modal.classList.add("active");
       setTimeout(() => location.reload(), 3000);
     }
   }, 1000);
@@ -85,13 +85,13 @@ function destapar(id) {
         winAudio.play();
         clearInterval(tiempoRegresivo);
         modal.innerHTML = "¡Felicidades! Ganaste";
-        modal.classList.add('active');
+        modal.classList.add("active");
         setTimeout(() => location.reload(), 3000);
       }
     } else {
       setTimeout(() => {
-        tarjeta1.innerHTML = '';
-        tarjeta2.innerHTML = '';
+        tarjeta1.innerHTML = "";
+        tarjeta2.innerHTML = "";
         tarjeta1.disabled = false;
         tarjeta2.disabled = false;
         tarjetasDestapadas = 0;

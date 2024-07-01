@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+    <title>Chatbot Assistant</title>
+    <link rel="stylesheet" href="Css/chat.css">
 </head>
+
 <body>
-    
-<h1>Probando</h1>
+    <div class="chat-container">
+        <div class="chat-box">
+            <div class="chat-header">
+                <div class="header-content">
+                    <h2 class="chat-title">Asistente Bartolome</h2>
+                    <div class="status">Online</div>
+                </div>
+            </div>
+            <div class="chat-display" id="chatDisplay">
+                <div class="chat-message user-message">
+                    X
+                </div>
+                <div class="chat-message bot-message">Hola, es un gusto poder atenderte el dia de hoy, ¿En qué te puedo
+                    ayudar?</div>
+            </div>
+            <div class="chat-input-container">
+                <div class="input-group">
+                    <input placeholder="Type your message..." class="chat-input" id="chatInput" type="text">
+                    <button class="send-button" id="sendButton">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    <script src="chat.js"></script>
+    <script src="JavaScript/chat.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto */
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto */
 }
 
 body {
@@ -11,18 +12,24 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    overflow-x: hidden;
+    /* Evita desbordamiento horizontal */
 }
 
 
 /*Estilos para el nav*/
 .menu_navegacion {
-    display: flex; /* Centro los elementos */
-    justify-content: space-around; /* Espacio entre elementos */
-    align-items: center; /* Centro verticalmente los elementos */
-    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
-    height: 120px; /* Ajusta la altura según sea necesario */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    display: flex;
+    /* Centro los elementos */
+    justify-content: space-around;
+    /* Espacio entre elementos */
+    align-items: center;
+    /* Centro verticalmente los elementos */
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    height: 120px;
+    /* Ajusta la altura según sea necesario */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
     margin-bottom: 3%;
 }
 
@@ -52,7 +59,8 @@ body {
 }
 
 .banner {
-    flex: 1; /* Toma el espacio restante disponible */
+    flex: 1;
+    /* Toma el espacio restante disponible */
     width: 100%;
 }
 
@@ -71,8 +79,8 @@ main {
 .section1 {
     padding: 10px;
     border-radius: 8px;
-    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
@@ -82,11 +90,11 @@ main {
 
 
 .section2 {
-    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
     width: 100%;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: white;
 }
@@ -117,19 +125,24 @@ main {
 }
 
 .section1 button {
-    width: 120px;  /* Increase button width */
-    height: 120px; /* Increase button height */
+    width: 120px;
+    /* Increase button width */
+    height: 120px;
+    /* Increase button height */
     font-size: 2em;
     margin: 5px;
-    position: relative; /* Ensures that image will be positioned relative to button */
-    overflow: hidden; /* Hides any part of the image that goes beyond the button */
+    position: relative;
+    /* Ensures that image will be positioned relative to button */
+    overflow: hidden;
+    /* Hides any part of the image that goes beyond the button */
 }
 
 
 .section1 button img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire button without distortion */
+    object-fit: cover;
+    /* Ensures the image covers the entire button without distortion */
 }
 
 
@@ -143,7 +156,8 @@ main {
 
 
 .pie_pagina {
-    background-image: linear-gradient(to bottom,  #1d2643, #2b335c); /* Degradado hacia abajo */
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    /* Degradado hacia abajo */
     color: white;
     padding: 5px;
     text-align: center;
@@ -156,7 +170,9 @@ main {
     margin-bottom: 10px;
 }
 
-.info_contacto p, .redes_sociales a, .derechos_reservados p {
+.info_contacto p,
+.redes_sociales a,
+.derechos_reservados p {
     margin: 5px 0;
 }
 
