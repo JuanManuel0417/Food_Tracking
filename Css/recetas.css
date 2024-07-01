@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto */
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto */
 }
 
 body {
@@ -11,18 +12,24 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    overflow-x: hidden;
+    /* Evita desbordamiento horizontal */
 }
 
 
 /*Estilos para el nav*/
 .menu_navegacion {
-    display: flex; /* Centro los elementos */
-    justify-content: space-around; /* Espacio entre elementos */
-    align-items: center; /* Centro verticalmente los elementos */
-    background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
-    height: 120px; /* Ajusta la altura según sea necesario */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    display: flex;
+    /* Centro los elementos */
+    justify-content: space-around;
+    /* Espacio entre elementos */
+    align-items: center;
+    /* Centro verticalmente los elementos */
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    height: 120px;
+    /* Ajusta la altura según sea necesario */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
     margin-bottom: 3%;
 }
 
@@ -52,42 +59,52 @@ body {
 }
 
 
-.Contenidos{
+.Contenidos {
     justify-content: center;
     align-items: center;
     list-style-type: none;
     padding: 0;
-    display: flex; 
+    display: flex;
     color: black;
     margin-bottom: 4%;
 }
 
-.Contenidos h3{
+.Contenidos h3 {
     margin-top: 4%;
 }
 
 .estrellas {
     margin-top: 5%;
-   display: inline-block;
-   color: #ffcc00;
-   font-size: 24px;
+    display: inline-block;
+    color: #ffcc00;
+    font-size: 24px;
 }
 
 /* Estilos de cada uno de los locales disponibles */
-.Rebel, .Supra, .Siete, .Rake, .Fernanda_Castillo, .Glan_Vives, .Makana, .Luxe, .Paris{
-  color: white;
-  height: 400px;
-  width: 400px;
-  padding: 10px;
-  background-image: linear-gradient(to bottom,  #1d2643, #2b335c);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
-  margin-left: 20px;
-  text-align: center;
+.Rebel,
+.Supra,
+.Siete,
+.Rake,
+.Fernanda_Castillo,
+.Glan_Vives,
+.Makana,
+.Luxe,
+.Paris {
+    color: white;
+    height: 400px;
+    width: 400px;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: center;
 }
+
 .pie_pagina {
-    background-image: linear-gradient(to bottom,  #1d2643, #2b335c); /* Degradado hacia abajo */
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    /* Degradado hacia abajo */
     color: white;
     padding: 5px;
     text-align: center;
@@ -100,7 +117,9 @@ body {
     margin-bottom: 10px;
 }
 
-.info_contacto p, .redes_sociales a, .derechos_reservados p {
+.info_contacto p,
+.redes_sociales a,
+.derechos_reservados p {
     margin: 5px 0;
 }
 
