@@ -59,18 +59,43 @@ body {
 }
 
 
-.Contenidos {
+.Contenido {
+    margin: 0% 2% 4% 1%;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     padding: 0;
-    display: flex;
     color: black;
-    margin-bottom: 4%;
+    display: grid; /* Organiza los elementos en una cuadricula de una sola columna*/
+    grid-template-columns: repeat(3, 1fr); /* Agrega columnas a la cuadricula del (display: grid)*/
 }
 
-.Contenidos h3 {
+.Contenido h3 {
     margin-top: 4%;
+}
+
+.Contenido a {
+    text-decoration: none;
+}
+
+.Caja {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos de las tarjetas con las recetas*/
+.tarjeta{
+    color: white;
+    height: 400px;
+    width: 400px;
+    padding: 15px;
+    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .estrellas {
@@ -80,26 +105,18 @@ body {
     font-size: 24px;
 }
 
-/* Estilos de cada uno de los locales disponibles */
-.Rebel,
-.Supra,
-.Siete,
-.Rake,
-.Fernanda_Castillo,
-.Glan_Vives,
-.Makana,
-.Luxe,
-.Paris {
-    color: white;
-    height: 400px;
-    width: 400px;
-    padding: 10px;
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-    border-radius: 10px;
-    margin-left: 20px;
-    text-align: center;
+/* transición de las tarjetas con recetas */
+.Contenido .Caja { /*Selecciona los elementos Caja dentro del elemento Contenido*/
+    cursor: pointer;
+    transition: 400ms; /*Añade una transición suave de 0.4 segundos para cualquier cambio de estilo que se hace con el hover*/
+}
+
+.Contenido .Caja:hover { /* Selecciona los elementos Caja dentro del elemento Contenido cuando el raton está sobre ellos*/
+    transform: scale(1.1, 1.1 ); /*Escala estos elementos a 1.1 veces su tamaño original en horizontal y vertical*/
+}
+
+.Contenido:hover > .Caja:not(:hover) { /*Selecciona los elementos Caja dentro de Contenido que no están siendo seleccionados por el ratón cuando el ratón está sobre el elemento Contenido pero no directamente sobre estos elementos Caja.*/
+    filter: blur(10px); /*Aplica un filtro de desenfoque de 10px a esos elementos que no estan siendo seleccionados por el raton*/
 }
 
 .pie_pagina {
@@ -110,6 +127,7 @@ body {
     text-align: center;
     position: relative;
     bottom: 0;
+    margin-top: 3%;
     width: 100%;
 }
 

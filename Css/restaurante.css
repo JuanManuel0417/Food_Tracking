@@ -79,6 +79,7 @@ legend {
 
 /* Estilos para el formulario */
 .form {
+    width: 30%;
     position: relative;
     /* Establece un contexto de posicionamiento relativo */
     display: flex;
