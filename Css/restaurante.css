@@ -213,9 +213,6 @@ select:focus {
     /* Sombra al pasar el ratón */
 }
 
-
-
-
 .pie_pagina {
     background-image: linear-gradient(to bottom, #1d2643, #2b335c);
     /* Degradado hacia abajo */
