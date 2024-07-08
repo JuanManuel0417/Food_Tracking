@@ -1,14 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
-    margin: 0;
-}
-
-.chat-container {
+.contenedor-chat {
     max-width: 400px;
     margin: auto;
     background: #fff;
@@ -17,31 +7,31 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.chat-box {
+.caja-chat {
     display: flex;
     flex-direction: column;
     height: 400px;
 }
 
-.chat-header {
+.encabezado-chat {
     padding: 10px 16px;
     border-bottom: 1px solid #ddd;
     background-color: white;
 }
 
-.header-content {
+.contenido-encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.chat-title {
+.titulo-chat {
     font-size: 1.125rem;
     font-weight: 600;
     color: #333;
 }
 
-.status {
+.estado {
     background-color: #28a745;
     color: white;
     font-size: 0.75rem;
@@ -49,7 +39,7 @@ body {
     border-radius: 9999px;
 }
 
-.chat-display {
+.visualizacion-chat {
     flex: 1;
     padding: 12px;
     overflow-y: auto;
@@ -58,37 +48,37 @@ body {
     gap: 8px;
 }
 
-.chat-message {
+.mensaje-chat {
     max-width: 75%;
     padding: 8px 12px;
     border-radius: 12px;
     font-size: 0.875rem;
 }
 
-.user-message {
+.mensaje-usuario {
     align-self: flex-end;
     background-color: #007bff;
     color: white;
 }
 
-.bot-message {
+.mensaje-bot {
     align-self: flex-start;
     background-color: #6c757d;
     color: white;
 }
 
-.chat-input-container {
+.contenedor-entrada-chat {
     padding: 8px 12px;
     border-top: 1px solid #ddd;
     background-color: white;
 }
 
-.input-group {
+.grupo-entrada {
     display: flex;
     gap: 8px;
 }
 
-.chat-input {
+.entrada-chat {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
@@ -97,7 +87,7 @@ body {
     color: #333;
 }
 
-.send-button {
+.boton-enviar {
     background-color: #007bff;
     color: white;
     font-weight: bold;
@@ -109,6 +99,108 @@ body {
     font-size: 0.875rem;
 }
 
-.send-button:hover {
+.boton-enviar:hover {
     background-color: #0056b3;
 }
+
+.btn-53 {
+    appearance: none; /* Elimina el estilo predeterminado del botón */
+    background-color: #000; /* Color de fondo negro */
+    background-image: none; /* No hay imagen de fondo */
+    
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    clip-path: radial-gradient(circle, transparent 80%, black 80%);
+    padding: 0;
+    border: 1px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-53 .original {
+    background: #fff;
+    color: #000;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+    transform: translateY(100%);
+}
+
+.btn-53 .letters {
+    display: inline-flex;
+}
+
+.btn-53 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-53 span:nth-child(2n) {
+    transform: translateY(15px);
+}
+
+.btn-53:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+.btn-53:hover span:nth-child(7) {
+    transition-delay: 0.6s;
+}
+
+
+.contenedor-principal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.contenedor-chat {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 80px; /* Ajuste para colocar el contenedor por encima del botón */
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Otros estilos para el botón y el contenedor */
