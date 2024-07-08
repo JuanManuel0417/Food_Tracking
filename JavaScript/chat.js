@@ -1,19 +1,15 @@
-const toqueBoton = document.getElementById('toqueBoton');
-const contenedorChat = document.getElementById('contenedorChat');
+const toqueBoton = document.getElementById("toqueBoton");
+const contenedorChat = document.getElementById("contenedorChat");
 
-toqueBoton.addEventListener('click', function () {
-    if (contenedorChat.style.display === 'none') {
-        contenedorChat.style.display = 'block';
-        toqueBoton.querySelector('.original').textContent = 'Ocultar Chat';
-    } else {
-        contenedorChat.style.display = 'none';
-        toqueBoton.querySelector('.original').textContent = 'Asistente';
-    }
+toqueBoton.addEventListener("click", function () {
+  if (contenedorChat.style.display === "none") {
+    contenedorChat.style.display = "block";
+    toqueBoton.querySelector(".original").textContent = "Ocultar Chat";
+  } else {
+    contenedorChat.style.display = "none";
+    toqueBoton.querySelector(".original").textContent = "Asistente";
+  }
 });
-
-
-
-
 
 document.getElementById("botonEnviar").addEventListener("click", enviarMensaje); //Llama la funcion al hacer clic en el boton de enviar
 
@@ -59,15 +55,18 @@ function enviarMensaje() {
 function obtenerRespuestaBot(mensaje) {
   switch (mensaje.toLowerCase()) {
     case "1":
-      return "Menú del día: Sopa de pollo, arroz con pollo, ensalada, jugo de naranja.";
+      return "Food Trackin es la página web del restaurante escolar de la I.E. República de Honduras en Medellín. Se enfoca en optimizar la administración del Programa de Alimentación Escolar (PAE), promoviendo una alimentación saludable y el aprendizaje en la cocina.";
 
     case "2":
-      return "Horario de atención: Lunes a viernes de 7:00 AM a 3:00 PM.";
+      return "Para ser beneficiario del programa PAE, debes ser estudiante de la institución. Dirígete al director de grupo correspondiente para solicitar el ingreso al programa.";
 
     case "3":
-      return "Para más información, contacta a la administración en el correo: admin@restauranteescolar.com.";
+      return "Puedes explorar cursos gratuitos de cocina en Edutin. Visita este enlace para más información y opciones disponibles.";
+
+    case "4":
+      return "Puedes contactar al administrador escribiendo a gonzalezmejiaj@gmail.com. Estará encantado de ayudarte con cualquier consulta o solicitud relacionada con el programa PAE.";
 
     default:
-      return "Lo siento, no entiendo esa opción. Por favor, elige una opción válida: 1, 2 o 3.";
+      return "Lo siento, no entiendo esa opción. Por favor, elige una opción válida: 1, 2, 3 o 4.";
   }
 }

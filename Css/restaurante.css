@@ -175,7 +175,7 @@ select:focus {
 }
 
 /* Estilos para el botón */
-button {
+.Boton-Entar {
     padding: 10px 20px;
     /* Espaciado interno */
     border: none;
@@ -202,7 +202,7 @@ button {
     /* Sombra del botón */
 }
 
-button:hover {
+.Boton-Entar:hover {
     background-color: #0077be;
     /* Color de fondo al pasar el ratón */
     font-size: 17px;

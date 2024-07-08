@@ -66,8 +66,10 @@ body {
     list-style-type: none;
     padding: 0;
     color: black;
-    display: grid; /* Organiza los elementos en una cuadricula de una sola columna*/
-    grid-template-columns: repeat(3, 1fr); /* Agrega columnas a la cuadricula del (display: grid)*/
+    display: grid;
+    /* Organiza los elementos en una cuadricula de una sola columna*/
+    grid-template-columns: repeat(3, 1fr);
+    /* Agrega columnas a la cuadricula del (display: grid)*/
 }
 
 .Contenido h3 {
@@ -84,7 +86,7 @@ body {
 }
 
 /* Estilos de las tarjetas con las recetas*/
-.tarjeta{
+.tarjeta {
     color: white;
     height: 400px;
     width: 400px;
@@ -106,17 +108,23 @@ body {
 }
 
 /* transición de las tarjetas con recetas */
-.Contenido .Caja { /*Selecciona los elementos Caja dentro del elemento Contenido*/
+.Contenido .Caja {
+    /*Selecciona los elementos Caja dentro del elemento Contenido*/
     cursor: pointer;
-    transition: 400ms; /*Añade una transición suave de 0.4 segundos para cualquier cambio de estilo que se hace con el hover*/
+    transition: 400ms;
+    /*Añade una transición suave de 0.4 segundos para cualquier cambio de estilo que se hace con el hover*/
 }
 
-.Contenido .Caja:hover { /* Selecciona los elementos Caja dentro del elemento Contenido cuando el raton está sobre ellos*/
-    transform: scale(1.1, 1.1 ); /*Escala estos elementos a 1.1 veces su tamaño original en horizontal y vertical*/
+.Contenido .Caja:hover {
+    /* Selecciona los elementos Caja dentro del elemento Contenido cuando el raton está sobre ellos*/
+    transform: scale(1.1, 1.1);
+    /*Escala estos elementos a 1.1 veces su tamaño original en horizontal y vertical*/
 }
 
-.Contenido:hover > .Caja:not(:hover) { /*Selecciona los elementos Caja dentro de Contenido que no están siendo seleccionados por el ratón cuando el ratón está sobre el elemento Contenido pero no directamente sobre estos elementos Caja.*/
-    filter: blur(10px); /*Aplica un filtro de desenfoque de 10px a esos elementos que no estan siendo seleccionados por el raton*/
+.Contenido:hover>.Caja:not(:hover) {
+    /*Selecciona los elementos Caja dentro de Contenido que no están siendo seleccionados por el ratón cuando el ratón está sobre el elemento Contenido pero no directamente sobre estos elementos Caja.*/
+    filter: blur(10px);
+    /*Aplica un filtro de desenfoque de 10px a esos elementos que no estan siendo seleccionados por el raton*/
 }
 
 .pie_pagina {
@@ -149,4 +157,213 @@ body {
 
 .redes_sociales a:hover {
     text-decoration: underline;
+}
+
+.contenedor-chat {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.caja-chat {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.encabezado-chat {
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+
+.contenido-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-chat {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.estado {
+    background-color: #28a745;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 9999px;
+}
+
+.visualizacion-chat {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mensaje-chat {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+}
+
+.mensaje-usuario {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+.mensaje-bot {
+    align-self: flex-start;
+    background-color: #6c757d;
+    color: white;
+}
+
+.contenedor-entrada-chat {
+    padding: 8px 12px;
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+
+.grupo-entrada {
+    display: flex;
+    gap: 8px;
+}
+
+.entrada-chat {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.boton-enviar {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 0.875rem;
+}
+
+.boton-enviar:hover {
+    background-color: #0056b3;
+}
+
+.btn-53 {
+    appearance: none;
+    /* Elimina el estilo predeterminado del botón */
+    background-color: #000;
+    /* Color de fondo negro */
+    background-image: none;
+    /* No hay imagen de fondo */
+
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    clip-path: radial-gradient(circle, transparent 80%, black 80%);
+    padding: 0;
+    border: 1px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-53 .original {
+    background: #fff;
+    color: #000;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+    transform: translateY(100%);
+}
+
+.btn-53 .letters {
+    display: inline-flex;
+}
+
+.btn-53 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-53 span:nth-child(2n) {
+    transform: translateY(15px);
+}
+
+.btn-53:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+.btn-53:hover span:nth-child(7) {
+    transition-delay: 0.6s;
+}
+
+
+.contenedor-principal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.contenedor-chat {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 80px;
+    /* Ajuste para colocar el contenedor por encima del botón */
+    right: 20px;
+    z-index: 1000;
 }
