@@ -25,7 +25,7 @@ body {
     /* Espacio entre elementos */
     align-items: center;
     /* Centro verticalmente los elementos */
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    background: linear-gradient(to right, #005C98, #505BDA);
     height: 120px;
     /* Ajusta la altura según sea necesario */
     width: 100%;
@@ -90,7 +90,7 @@ legend {
     /* Espacio entre los elementos */
     padding: 30px;
     /* Espaciado interno alrededor del contenido */
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    background: linear-gradient(to right, #005C98, #505BDA);
     /* Gradiente de fondo */
     border-radius: 10px;
     /* Bordes redondeados */
@@ -213,11 +213,8 @@ select:focus {
     /* Sombra al pasar el ratón */
 }
 
-
-
-
 .pie_pagina {
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    background: linear-gradient(to right, #005C98, #505BDA);
     /* Degradado hacia abajo */
     color: white;
     padding: 5px;
