@@ -25,7 +25,7 @@ body {
     /* Espacio entre elementos */
     align-items: center;
     /* Centro verticalmente los elementos */
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    background: linear-gradient(to right, #005C98, #505BDA);
     height: 120px;
     /* Ajusta la altura según sea necesario */
     width: 100%;
@@ -79,7 +79,7 @@ main {
 .section1 {
     padding: 10px;
     border-radius: 8px;
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    background: linear-gradient(to right, #005C98, #505BDA);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -89,7 +89,7 @@ main {
 }
 
 .section2 {
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
+    background: linear-gradient(to right, #005C98, #505BDA);
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -146,8 +146,7 @@ main {
 
 
 .pie_pagina {
-    background-image: linear-gradient(to bottom, #1d2643, #2b335c);
-    /* Degradado hacia abajo */
+    background: linear-gradient(to right, #005C98, #505BDA);
     color: white;
     padding: 5px;
     text-align: center;
