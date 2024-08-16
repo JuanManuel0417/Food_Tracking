@@ -1,3 +1,4 @@
+
 <?php
 include ('../conexion/conexion.php'); //Incluimos un archivo de php
 
@@ -14,6 +15,4 @@ $rows = mysqli_num_rows($query);
     }else{
         echo "No autenticado";
     }
-
-
-    // nombres, apellidos, documento, contrasena
+?>

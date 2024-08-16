@@ -1,3 +1,4 @@
+
 <?php
 include ('../conexion/conexion.php'); //Incluimos un archivo de php
     $nombre = $_POST['nombre'];
@@ -16,3 +17,5 @@ $query = mysqli_query($conectar, $sql);
     }else{
         echo "Error de registro";
     }
+?>
+
