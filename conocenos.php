@@ -4,37 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Restaurante</title>
-    <link rel="stylesheet" href="Css/restaurante.css">
+    <title>Food Conocenos</title>
+    <link rel="stylesheet" href="Css/conocenos.css">
     <link rel="stylesheet" href="Css/chat.css">
 </head>
 
 <body>
-    <nav class="menu_navegacion">
+<nav class="menu_navegacion">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="recetas.html">Recetas</a></li>
-            <li><a href="restaurante.html">Restaurante</a></li>
-            <li><a href="refrigerio.html">Refrigerio</a></li>
-            <li><a href="conocenos.html">Conocenos</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="recetas.php">Recetas</a></li>
+            <li><a href="restaurante.php">Restaurante</a></li>
+            <li><a href="refrigerio.php">Refrigerio</a></li>
+            <li><a href="conocenos.php">Conocenos</a></li>
         </ul>
     </nav>
-
-    <div class="contenido_form">
-        <form class="form">
-            <legend>Inicio al Restaurante</legend>
-            <select name="rol" id="rol">
-                <option value=""></option>
-                <option value="Docente">Docente</option>
-                <option value="Admin">Administrador</option>
-                <option value="Estudiante">Estudiante</option>
-                <option value="Acudiente">Acudiente</option>
-            </select>
-            <input placeholder="Usuario" class="input" type="text">
-            <input placeholder="Contraseña" class="input" type="password">
-            <button class="Boton-Entar">Entrar</button>
-        </form>
-    </div>
 
     <div class="contenedor-principal">
         <button class="btn-53" id="toqueBoton">
@@ -94,8 +78,9 @@
             <p>&copy; 2024 Food Tracking. Todos los derechos reservados.</p>
         </div>
     </footer>
+    </form>
 
     <script src="JavaScript/chat.js"></script>
-
+    
 </body>
 </html>
