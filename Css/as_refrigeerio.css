@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Evita desbordamiento horizontal */
+}
+
+
+/*Estilos para el nav*/
+.menu_navegacion {
+    display: flex;
+    /* Centro los elementos */
+    justify-content: space-around;
+    /* Espacio entre elementos */
+    align-items: center;
+    /* Centro verticalmente los elementos */
+    background: linear-gradient(to right, #005C98, #505BDA);
+    height: 120px;
+    /* Ajusta la altura según sea necesario */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-bottom: 3%;
+}
+
+.menu_navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.menu_navegacion li {
+    float: left;
+}
+
+.menu_navegacion a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu_navegacion a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #d1e7ff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+td input[type="text"], td input[type="number"], td input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+td input[type="checkbox"] {
+    margin: 0 auto;
+    display: block;
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
