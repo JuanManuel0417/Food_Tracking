@@ -11,13 +11,14 @@
 </head>
 
 <body>
-    <nav class="menu_navegacion">
+<nav class="menu_navegacion">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="recetas.html">Recetas</a></li>
-            <li><a href="restaurante.html">Restaurante</a></li>
-            <li><a href="refrigerio.html">Refrigerio</a></li>
-            <li><a href="conocenos.html">Conocenos</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="recetas.php">Recetas</a></li>
+            <li><a href="restaurante.php">Restaurante</a></li>
+            <li><a href="refrigerio.php">Refrigerio</a></li>
+            <li><a href="conocenos.php">Conocenos</a></li>
+            <li><a href="register.php">Registrate</a></li>
         </ul>
     </nav>
 
