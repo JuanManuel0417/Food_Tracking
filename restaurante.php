@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<nav class="menu_navegacion">
+    <nav class="menu_navegacion">
         <ul>
             <li><a href="index.php">Inicio</a></li>
             <li><a href="recetas.php">Recetas</a></li>
@@ -21,17 +21,17 @@
     </nav>
 
     <div class="contenido_form">
-        <form class="form">
+        <form class="form" action="php/logueo_restaurant.php" method="post">
             <legend>Inicio al Restaurante</legend>
             <select name="rol" id="rol">
                 <option value=""></option>
-                <option value="Docente">Docente</option>
-                <option value="Admin">Administrador</option>
-                <option value="Estudiante">Estudiante</option>
-                <option value="Acudiente">Acudiente</option>
+                <option value="docente" name="rol">Docente</option>
+                <option value="administrador" name="rol">Administrador</option>
+                <option value="estudiante" name="rol">Estudiante</option>
+                <option value="acudiente" name="rol">Acudiente</option>
             </select>
-            <input placeholder="Usuario" class="input" type="text">
-            <input placeholder="Contraseña" class="input" type="password">
+            <input placeholder="Usuario" class="input" type="text" name="document">
+            <input placeholder="Contraseña" class="input" type="password" name="password">
             <button class="Boton-Entar">Entrar</button>
         </form>
     </div>
@@ -98,4 +98,5 @@
     <script src="JavaScript/chat.js"></script>
 
 </body>
+
 </html>

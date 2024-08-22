@@ -1,18 +1,19 @@
-
+<!-- Esta es la funcion para mandar los registros a la taba -->
 <?php
 include ('../conexion/conexion.php'); //Incluimos un archivo de php
-    $documento = $_POST['documento'];
-    $fecha = $_POST['fecha'];
+    $documento = $_POST['document'];
+    $fecha = $_POST['date'];
 
-
-    $sql = "INSERT INTO asistencia (documento, fecha) 
+    $sql = "select * from registro where documento ='".$documento."' ";
+    $query = mysqli_query($conectar, $sql);
+    $rows = mysqli_num_rows($query);
+        if($rows >0) {
+            $sql = "INSERT INTO asistencia (documento, fecha) 
             VALUES ('$documento', '$fecha')";
+            $query = mysqli_query($conectar, $sql);
+            echo "Registro exitoso";
 
-$query = mysqli_query($conectar, $sql);
-
-    if($query){
-        echo "Asistencia exitosa";
-    }else{
-        echo "Error de registro";
-    }
+        }else{
+            echo "Documento no registrado";
+        }
 ?>

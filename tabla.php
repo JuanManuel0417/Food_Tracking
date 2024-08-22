@@ -9,10 +9,12 @@ $result = mysqli_query($conectar, $sql);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Listado de Asistencia</title>
 </head>
+
 <body>
     <h1>Listado de Asistencia</h1>
     <table border="1">
@@ -26,16 +28,17 @@ $result = mysqli_query($conectar, $sql);
         </thead>
         <tbody>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
-            <tr>
-                <td><?php echo $row['nombre']; ?></td>
-                <td><?php echo $row['apellido']; ?></td>
-                <td><?php echo $row['documento']; ?></td>
-                <td>
-                    <input type="checkbox" disabled>
-                </td>
-            </tr>
+                <tr>
+                    <td><?php echo $row['nombre']; ?></td>
+                    <td><?php echo $row['apellido']; ?></td>
+                    <td><?php echo $row['documento']; ?></td>
+                    <td>
+                        <input type="checkbox" disabled>
+                    </td>
+                </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
 </body>
+
 </html>

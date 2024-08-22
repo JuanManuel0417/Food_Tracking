@@ -1,3 +1,4 @@
+<!-- Conexión a toda la database -->
 <?php
 $host = "localhost";
 $user = "root";
@@ -10,5 +11,4 @@ $host,
 $user,
 $password,
 $bd);
-
 ?>
