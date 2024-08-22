@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<nav class="menu_navegacion">
+    <nav class="menu_navegacion">
         <ul>
             <li><a href="index.php">Inicio</a></li>
             <li><a href="recetas.php">Recetas</a></li>
@@ -244,6 +244,7 @@
     </footer>
 
     <script src="JavaScript/chat.js"></script>
-    
+
 </body>
+
 </html>

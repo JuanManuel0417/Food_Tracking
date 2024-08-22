@@ -1,11 +1,11 @@
-
+<!-- Este es el metodo para registrarse -->
 <?php
-include ('../conexion/conexion.php'); //Incluimos un archivo de php
+include ('../conexion/conexion.php'); 
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $documento = $_POST['documento'];
     $correo = $_POST['correo'];
-    $contrasena = ($_POST['contrasena']); // Encriptar la contraseña
+    $contrasena = ($_POST['contrasena']); 
 
     $sql = "INSERT INTO registro (nombre, apellido, documento, correo, contrasena) 
             VALUES ('$nombre', '$apellido', '$documento', '$correo', '$contrasena')";

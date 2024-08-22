@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Fondo blanco para todo */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff !important; /* Fondo blanco asegurado */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+/*Estilos para el nav*/
+.menu_navegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #005C98, #505BDA);
+    height: 120px;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.menu_navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.menu_navegacion li {
+    float: left;
+}
+
+.menu_navegacion a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu_navegacion a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #d1e7ff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+td input[type="text"], td input[type="number"], td input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+td input[type="checkbox"] {
+    margin: 0 auto;
+    display: block;
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.contenedor {
+    position: relative;
+    margin-top: 0; /* Remueve el margen superior */
+    padding-top: 10px; /* Ajusta para mover el escáner hacia arriba */
+}
+
+.luz-lector {
+    position: absolute;
+    width: 60%;
+    min-height: 80%;
+    border: 1px dashed #000000; /* Borde negro para mayor visibilidad */
+    border-radius: 10px;
+    z-index: 300000;
+    top: 0 !important; /* Cambiado para mover hacia arriba */
+    left: 20%;
+}
+
+.animate {
+    position: absolute;
+    top: 1%;
+    width: 100%;
+    animation: move 3s ease infinite;
+}
+
+@keyframes move {
+    60% {
+        top: 80%;
+    }
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .copy-btn i {
+    font-size: 16px;
+  }
+  

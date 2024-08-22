@@ -1,4 +1,4 @@
-
+<!-- Esta es la funcion para que un usuario luego de registrarse, se pueda loguear -->
 <?php
 include ('../conexion/conexion.php'); //Incluimos un archivo de php
 
@@ -6,13 +6,16 @@ include ('../conexion/conexion.php'); //Incluimos un archivo de php
 
 $sql = "select * from registro 
 where documento = '".$_POST['document']."'
-and contrasena = '".$_POST['password']."' ";
+and contrasena = '".$_POST['password']."'";
 $query = mysqli_query($conectar, $sql);
 $rows = mysqli_num_rows($query);
 
-    if($rows){
-        echo "Autenticado";
-    }else{
-        echo "No autenticado";
-    }
+if ($rows) {
+    // Si el usuario está autenticado, redirigir a index.php
+    header("Location: ../index.php");
+    exit(); // Asegurarse de que el script se detenga después de la redirección
+} else {
+    // Si no está autenticado, mostrar un mensaje de error
+    echo "No autenticado";
+}
 ?>
