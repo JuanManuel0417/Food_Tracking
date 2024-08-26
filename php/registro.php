@@ -6,14 +6,16 @@ include ('../conexion/conexion.php'); //Incluimos un archivo de php
     $documento = $_POST['documento'];
     $correo = $_POST['correo'];
     $contrasena = ($_POST['contrasena']); // Encriptar la contraseña
+    $rol = $_POST['rol'];
+    $grupo = $_POST['grupo'];
 
-    $sql = "INSERT INTO registro (nombre, apellido, documento, correo, contrasena) 
-            VALUES ('$nombre', '$apellido', '$documento', '$correo', '$contrasena')";
+    $sql = "INSERT INTO registro (nombre, apellido, documento, correo, contrasena, rol, grupo) 
+            VALUES ('$nombre', '$apellido', '$documento', '$correo', '$contrasena','$rol','$grupo')";
 
 $query = mysqli_query($conectar, $sql);
 
     if($query){
-        echo "Registro Exitoso";
+        header ('Location: ../register.php');
     }else{
         echo "Error de registro";
     }

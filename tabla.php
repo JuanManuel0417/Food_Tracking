@@ -31,7 +31,7 @@ $result = mysqli_query($conectar, $sql);
                 <td><?php echo $row['apellido']; ?></td>
                 <td><?php echo $row['documento']; ?></td>
                 <td>
-                    <input type="checkbox" disabled>
+                    <input type="checkbox">
                 </td>
             </tr>
             <?php endwhile; ?>
