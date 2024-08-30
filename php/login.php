@@ -13,7 +13,7 @@ $rows = mysqli_num_rows($query);
     if($rows){
         $datos = mysqli_fetch_assoc($query); // OBtenter los atos de la consulta
 
-        $_SESSION['usuario'] = $datos ['nombre'];
+        $_SESSION['usuario'] = $datos ['primer_nombre'];
 
         header ('Location: ../index.php');
     }else{

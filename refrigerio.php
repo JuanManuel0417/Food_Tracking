@@ -2,7 +2,7 @@
 include('conexion/session.php');
 
 if(isset($_SESSION['usuario'])){
-include('php/asistencia.php');
+include('php/lista_de_grupo.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,26 +51,29 @@ include('php/asistencia.php');
     <table border="1">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
+                <th>Primer Nombre</th>
+                <th>Segundo Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
                 <th>Documento</th>
-                <th>Fecha</th>
                 <th>Asistencia</th>
             </tr>
         </thead>
         <tbody>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <tr>
-                <td><?php echo $row['nombre']; ?></td>
-                <td><?php echo $row['apellido']; ?></td>
+                <td><?php echo $row['primer_nombre']; ?></td>
+                <td><?php echo $row['segundo_nombre'];?></td>
+                <td><?php echo $row['primer_apellido']; ?></td>
+                <td><?php echo $row['segundo_apellido']; ?></td>
                 <td><?php echo $row['documento']; ?></td>
-                <td><div class="fecha-actual" name="fecha"></div></td>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" name="asistencia"></td>
             </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
-    <button class="boton_confirmar">Confirmar</button>
+    <input type="date" name="fecha" required>
+    <button class="boton_confirmar">Confirmar y Enviar</button>
     </form>
 
     <footer>
@@ -78,22 +81,6 @@ include('php/asistencia.php');
     </footer>
 
     <script src="JavaScript/chat.js"></script>
-    <script>
-    function actualizarFecha() {
-        const fechaElementos = document.querySelectorAll(".fecha-actual");
-        const fechaActual = new Date();
-        const opciones = { year: 'numeric', month: 'numeric', day: 'numeric' };
-        const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
-
-        // Itera sobre todos los elementos de fecha y actualiza el texto
-        fechaElementos.forEach(elemento => {
-            elemento.textContent = fechaFormateada;
-        });
-    }
-
-    // Llama a la función para establecer la fecha en todos los elementos
-    actualizarFecha();
-</script>
 </html>
 <?php
 }else

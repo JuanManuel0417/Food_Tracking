@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="bg_animate">
+    <div class="bg_animate">
         <div class="header_nav">
             <div class="contenedor">
                 <h1> </h1>
@@ -80,12 +80,17 @@
                                 <option value="1°1">1-1</option> 
                                 <option value="preescolar">Preescolar</option> 
                             </select>
-                                <input type="text" placeholder="Nombre" class="flip-card__input" name="nombre">
-                                <input type="text" placeholder="Apellido" class="flip-card__input" name="apellido">
+                            <select name="beneficio" class="flip-card__input">
+                                <option value="refrigerio">Vaso de Leche</option>
+                                <option value="restaurante">Restaurante Escolar</option>
+                            </select>
+                                <input type="text" placeholder="Primer Nombre" class="flip-card__input" name="primer_nombre">
+                                <input type="text" placeholder="Segundo Nombre" class="flip-card__input" name="segundo_nombre">
+                                <input type="text" placeholder="Primer  Apellido" class="flip-card__input" name="primer_apellido">
+                                <input type="text" placeholder="Segundo Apellido" class="flip-card__input" name="segundo_apellido">
                                 <input type="number" placeholder="Documento" class="flip-card__input" name="documento">
                                 <input type="email" placeholder="Correo" class="flip-card__input" name="correo">
-                                <input type="password" placeholder="Contraseña" class="flip-card__input"
-                                    name="contrasena">
+                                <input type="password" placeholder="Contraseña" class="flip-card__input" name="contrasena">
                                 <button class="flip-card__btn">Confirmar</button>
                             </form>
 
@@ -112,7 +117,7 @@
             <div class="burbuja"></div>
             <div class="burbuja"></div>
         </div>
-    </header>
+</div>
 
 </body>
 

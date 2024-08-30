@@ -12,12 +12,18 @@ $password,
 $bd);
 
 
-if (isset($_POST['grupo']) && !empty($_POST['grupo'])) {
-    $grupo = mysqli_real_escape_string($conectar, $_POST['grupo']);
 
+$fecha = isset($_POST['fecha']) ? mysqli_real_escape_string($conectar, $_POST['fecha']) : '';
 
-    // Consulta SQL para obtener estudiantes del grupo seleccionado
-    $query = "SELECT documento, nombre, apellido FROM registro WHERE grupo = '$grupo'";
-    $result = mysqli_query($conectar, $query);
+ // Capturar el estado del checkbox
+$asistencia = isset($_POST['asistencia']) ? 1 : 0;
+
+ // Insertar o actualizar el estado en la base de datos
+$sql = "INSERT INTO asistencia (documento, fecha, asistencia) VALUES ('$documento', '$fecha', '$asistencia')";
+
+if ($conectar->query($sql) === TRUE) {
+    echo "Asistencia guardada correctamente.";
+} else {
+    echo "Error al guardar la asistencia: " . $conectar->error;
 }
 ?>
