@@ -1,103 +1,101 @@
+<?php
+include('conexion/session.php');
+
+if(isset($_SESSION['usuario'])){
+include('php/asistencia.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Refrigerio</title>
+    <title>Asistencia Refrigerio</title>
     <link rel="stylesheet" href="Css/restaurante.css">
     <link rel="stylesheet" href="Css/chat.css">
 </head>
-
 <body>
-    <nav class="menu_navegacion">
-        <ul>
-            <li><a href="index.php">Inicio</a></li>
-            <li><a href="recetas.php">Recetas</a></li>
-            <li><a href="restaurante.php">Restaurante</a></li>
-            <li><a href="refrigerio.php">Refrigerio</a></li>
-            <li><a href="conocenos.php">Conocenos</a></li>
-        </ul>
-    </nav>
+    <header>
+    <?php  include('template/menus.php'); ?>
+    </header>
+    <h2>Listado de Asistencia</h2>
+    <form action="refrigerio.php" method="post">
+    <select class="grupo" name="grupo">
+        <option value="">Seleccione un grupo</option>
+        <option value="11°">11°</option>
+        <option value="10°2">10°2</option>
+        <option value="10°1">10°1</option>
+        <option value="9°2">9°2</option>
+        <option value="9°1">9°1</option>
+        <option value="8°2">8°2</option>
+        <option value="8°1">8°1</option>
+        <option value="7°2">7°2</option>
+        <option value="7°1">7°1</option>
+        <option value="6°3">6°3</option>
+        <option value="6°2">6°2</option>
+        <option value="6°1">6°1</option>
+        <option value="5°2">5°2</option>
+        <option value="5°1">5°1</option>
+        <option value="4°2">4°2</option>
+        <option value="4°1">4°1</option>
+        <option value="3°2">3°2</option>
+        <option value="3°1">3°1</option>
+        <option value="2°2">2°2</option>
+        <option value="2°1">2°1</option>
+        <option value="1°2">1°2</option>
+        <option value="1°1">1°1</option>
+        <option value="Preescolar">Preescolar</option>
+    </select>
+    <button>Mostrar Grupo</button>
+    </form>
+    <form action="php/asistencia.php" method="post">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Documento</th>
+                <th>Fecha</th>
+                <th>Asistencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <tr>
+                <td><?php echo $row['nombre']; ?></td>
+                <td><?php echo $row['apellido']; ?></td>
+                <td><?php echo $row['documento']; ?></td>
+                <td><div class="fecha-actual" name="fecha"></div></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
+    <button class="boton_confirmar">Confirmar</button>
+    </form>
 
-    <div class="contenido_form">
-        <form class="form">
-            <legend>Inicio al Refrigerio</legend>
-            <select name="rol" id="rol">
-                <option value=""></option>
-                <option value="Docente">Docente</option>
-                <option value="Admin">Administrador</option>
-                <option value="Estudiante">Estudiante</option>
-                <option value="Acudiente">Acudiente</option>
-            </select>
-            <input placeholder="Usuario" class="input" type="text">
-            <input placeholder="Contraseña" class="input" type="password">
-
-            <button class="Boton-Entar">Entrar</button>
-        </form>
-    </div>
-
-    <div class="contenedor-principal">
-        <button class="btn-53" id="toqueBoton">
-            <div class="original">Asistente</div>
-            <div class="letters">
-                <span>V</span>
-                <span>I</span>
-                <span>R</span>
-                <span>T</span>
-                <span>U</span>
-                <span>A</span>
-                <span>L</span>
-            </div>
-        </button>
-    </div>
-
-    <div class="contenedor-chat" id="contenedorChat" style="display: none;">
-        <div class="caja-chat">
-            <div class="encabezado-chat">
-                <div class="contenido-encabezado">
-                    <h2 class="titulo-chat">Asistente Bartolomé</h2>
-                    <div class="estado">En línea</div>
-                </div>
-            </div>
-            <div class="visualizacion-chat" id="visualizacionChat">
-                <div class="mensaje-chat mensaje-bot">Hola, es un placer atenderte. Por favor, escribe una opción para
-                    que pueda ayudarte. <br><br>
-                    1: Me gustaría saber. ¿Qué es Food Tracking?<br>
-                    2: ¿Cómo puedo ser beneficiario del programa PAE?<br>
-                    3: Quiero obtener un curso gratuito de cocina <br>
-                    4: Necesito contactarme con un administrador</div>
-            </div>
-            <div class="contenedor-entrada-chat">
-                <div class="grupo-entrada">
-                    <input placeholder="Escribe tu mensaje..." class="entrada-chat" id="entradaChat" type="text">
-                    <button class="boton-enviar" id="botonEnviar">Enviar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="pie_pagina">
-        <div class="info_contacto">
-            <h4>Contacto</h4>
-            <p>Email: gonzalezmejiaj264@gmail.com</p>
-            <p>Teléfono: (+57) 300 103 74 20</p>
-        </div>
-
-        <div class="redes_sociales">
-            <h4>Síguenos</h4>
-            <a href="https://www.facebook.com/juanmanuel.gonzalez0417" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/gonzalezzw_17/" target="_blank">Instagram</a>
-            <a href="https://github.com/JuanManuel0417" target="_blank">GitHub</a>
-        </div>
-
-        <div class="derechos_reservados">
-            <p>&copy; 2024 Food Tracking. Todos los derechos reservados.</p>
-        </div>
+    <footer>
+    <?php  include('template/footers.php'); ?>
     </footer>
 
     <script src="JavaScript/chat.js"></script>
+    <script>
+    function actualizarFecha() {
+        const fechaElementos = document.querySelectorAll(".fecha-actual");
+        const fechaActual = new Date();
+        const opciones = { year: 'numeric', month: 'numeric', day: 'numeric' };
+        const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
 
-</body>
+        // Itera sobre todos los elementos de fecha y actualiza el texto
+        fechaElementos.forEach(elemento => {
+            elemento.textContent = fechaFormateada;
+        });
+    }
 
+    // Llama a la función para establecer la fecha en todos los elementos
+    actualizarFecha();
+</script>
 </html>
+<?php
+}else
+    echo "Por favor inicia sesión para ingresar a este panel";
+?>

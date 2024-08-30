@@ -1,19 +1,23 @@
-<!-- Esta es la funcion para mandar los registros a la taba -->
 <?php
-include ('../conexion/conexion.php'); //Incluimos un archivo de php
-    $documento = $_POST['document'];
-    $fecha = $_POST['date'];
+$host = "localhost";
+$user = "root";
+$password = "";
+$bd  = "food_tracking"; // Reemplazar con el nombre de su base de datos
 
-    $sql = "select * from registro where documento ='".$documento."' ";
-    $query = mysqli_query($conectar, $sql);
-    $rows = mysqli_num_rows($query);
-        if($rows >0) {
-            $sql = "INSERT INTO asistencia (documento, fecha) 
-            VALUES ('$documento', '$fecha')";
-            $query = mysqli_query($conectar, $sql);
-            echo "Registro exitoso";
+// Conexión desde php a MYSQL (Base de datos)
+$conectar = mysqli_connect(
+$host,
+$user,
+$password,
+$bd);
 
-        }else{
-            echo "Documento no registrado";
-        }
+
+if (isset($_POST['grupo']) && !empty($_POST['grupo'])) {
+    $grupo = mysqli_real_escape_string($conectar, $_POST['grupo']);
+
+
+    // Consulta SQL para obtener estudiantes del grupo seleccionado
+    $query = "SELECT documento, nombre, apellido FROM registro WHERE grupo = '$grupo'";
+    $result = mysqli_query($conectar, $query);
+}
 ?>

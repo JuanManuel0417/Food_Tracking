@@ -28,14 +28,14 @@ $result = mysqli_query($conectar, $sql);
         </thead>
         <tbody>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                <tr>
-                    <td><?php echo $row['nombre']; ?></td>
-                    <td><?php echo $row['apellido']; ?></td>
-                    <td><?php echo $row['documento']; ?></td>
-                    <td>
-                        <input type="checkbox" disabled>
-                    </td>
-                </tr>
+            <tr>
+                <td><?php echo $row['nombre']; ?></td>
+                <td><?php echo $row['apellido']; ?></td>
+                <td><?php echo $row['documento']; ?></td>
+                <td>
+                    <input type="checkbox">
+                </td>
+            </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
